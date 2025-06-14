@@ -52,7 +52,6 @@ The system is evaluated using the following metrics:
 - **Precision**
 - **Recall** 
 - **F1-score**
-- **Average V(x_T)**: Average Lyapunov function value
 - **Switch Rate**
 - **False Switch Rate**
 
@@ -66,6 +65,16 @@ The system is evaluated using the following metrics:
 | C_threshold | 0.277 | 0.438 | 0.340 | 0.436 | 0.315 |
 | D_none | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 |
 
+Analysis of D_none Strategy (No Switching)
+The D_none strategy serves as a baseline control group that never predicts the need for switching (all predictions are False). This results in all key metrics being 0:
+
+Precision = 0: No samples are predicted as True, resulting in a denominator of 0, which is set to 0
+Recall = 0: No true positive samples are correctly identified since no switches are ever predicted
+F1 = 0: Both Precision and Recall are 0, making F1 score also 0
+Switch Rate = 0: No switches are ever predicted or triggered
+False Switch Rate = 0: Since no switches are predicted, there are no false positive predictions
+
+This baseline demonstrates the importance of having an active switching mechanism, as a passive approach (no switching) fails to capture any instances where human intervention is actually needed.
 ## 🚀 How to Run
 
 1. Place all CSV and script files in the same directory.
