@@ -89,7 +89,3 @@ The A_lyapunov strategy achieves the best trade-off between detection precision 
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
