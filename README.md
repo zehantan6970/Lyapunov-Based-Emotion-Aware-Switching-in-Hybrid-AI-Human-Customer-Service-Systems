@@ -75,6 +75,8 @@ Switch Rate = 0: No switches are ever predicted or triggered
 False Switch Rate = 0: Since no switches are predicted, there are no false positive predictions
 
 This baseline demonstrates the importance of having an active switching mechanism, as a passive approach (no switching) fails to capture any instances where human intervention is actually needed.
+
+The A_lyapunov strategy, which applies a personalized emotion dynamic matrix and Lyapunov function for adaptive switching, demonstrates the best overall performance among heuristic methods. It achieves the highest F1 score (0.371), a balanced switch rate (43.6%), and the lowest false switch rate (30.4%) among non-oracle strategies. Compared with the simple arousal threshold method (C_threshold), A_lyapunov is more robust and aligned with user-specific emotional trajectories. In contrast, fixed threshold (B_fixed) and null switching (D_none) fail to capture any instability, confirming the necessity of adaptive, user-aware switching mechanisms in emotion-driven human-AI interaction systems.
 ## 🚀 How to Run
 
 1. Place all CSV and script files in the same directory.
